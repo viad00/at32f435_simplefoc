@@ -88,9 +88,9 @@ float _readADCVoltageInline(const int pinA, const void* cs_params){
   //Serial.println("Analog Read");
   //uint32_t raw_adc = analogRead(pinA);
   if (pinA == 1) {
-    return ADC1_Buf[FAZEA_INDEX] * ((GenericCurrentSenseParams*)cs_params)->adc_voltage_conv;
+    return ADC2_Buf[FAZEA_INDEX] * ((GenericCurrentSenseParams*)cs_params)->adc_voltage_conv;
   } else if (pinA == 2) {
-    return ADC1_Buf[FAZEC_INDEX] * ((GenericCurrentSenseParams*)cs_params)->adc_voltage_conv;
+    return ADC2_Buf[FAZEC_INDEX] * ((GenericCurrentSenseParams*)cs_params)->adc_voltage_conv;
   } else {
     return 0;
   }
